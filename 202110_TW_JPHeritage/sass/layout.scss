@@ -1,0 +1,376 @@
+@charset "utf-8";
+@import './reset';
+@import "./mixin";
+
+
+@keyframes scrollDown {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 100%;
+    }
+}
+ 
+html {
+    // 專門處理IOS旋轉問題
+    -webkit-text-size-adjust: 100%;
+    *,
+    *:before,
+    *:after {
+        font-size: 14px;
+        font-family: "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif";
+    }
+}
+
+
+
+.menuBtn{
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 15px;
+
+
+    height: 40px;
+    width: 40px;
+    z-index: 12;
+
+    >div{
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        top: 40%;
+        border-radius: 100px;
+
+        transition: all ease .3s;
+    }
+    >:last-child{
+        width: 80%;
+        top: 70%;
+    }
+
+    @media screen and (max-width:980px) {
+        
+        display: block;
+        
+    }
+}
+
+nav{
+    position: fixed;
+    
+    
+    left: 0;
+    top: 0;
+    width: 265px;
+    height: 100vh;
+
+    z-index: 11;
+    >div{
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: white, $alpha: .2);
+        backdrop-filter: blur(5px);
+        border-right: 1px solid rgba($color: white, $alpha: .6);
+
+        position: relative;
+        @include flex-style(center,center,center,center,wrap,wrap);
+        align-content: center;
+
+        padding: 25px;
+
+
+
+        .logo{
+            width: 100%;
+            margin-bottom: 50px;
+            img{
+                width: 100%
+            }
+        }
+
+        .navItems{
+            @include flex-style(center,center,flex-start,start,nowrap,nowrap);
+            >a{
+                font-size: 22px;
+                color: white;
+                letter-spacing: 3.5px;
+                writing-mode: vertical-lr;
+                position: relative;
+                padding-top: 15px;
+                margin: 0 10px;
+
+                // 上面點點
+                &::before{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    background-color: white;
+                    top: 0;
+                    border-radius: 100%;
+                    left: calc(50% - 2.5px);
+                }
+
+                // 裝飾粗底線
+                &::after{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    height: 95%;
+                    // height: 0%;
+                    width: 0px;
+                    background-color: #a72a2e;
+                    z-index: -1;
+                    left: -3px;
+                    top: 10px;
+                    transition: width ease .2s;
+                }
+
+                &:hover{
+                    &::after{
+                        // height: 95%;
+                        width: 15px;
+
+                    }
+                }
+            }
+        }
+
+        .scrollIcon{
+            position: absolute;
+            bottom: 0;
+            .text{
+                width: 12px;
+                margin: auto;
+                margin-bottom: 5px;
+                transform: translate(2px,0px);
+                img{
+                    width: 100%;
+                }
+            }
+            .line{
+                height: 70px;
+                width: 1px;
+                background-color: rgba($color: white, $alpha: .6);
+                margin: auto;
+                position: relative;
+
+                // line上面的小球
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100%;
+                    background-color: white;
+                    left: -1.5px;
+
+                    animation-name: scrollDown;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+
+    }
+    
+
+    @media screen and (max-width:1400px) {
+        width: 240px;
+        >div{
+            .logo{
+                margin-bottom: 30px;
+            }
+
+            .scrollIcon{
+                .text{
+                    width: 10px;
+                }
+                .line{
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:980px) {
+        width: 100%;
+        height: 80px;
+
+        transform: translate(0,-100%);
+        transition: transform ease .3s;
+        transition-delay: .3s;
+        
+
+        >div{
+            justify-content: flex-start;
+            backdrop-filter: unset;
+            background-color: white;
+            border-bottom: 1px solid rgba($color: #000000, $alpha: .6);
+
+            padding: 10px 20px;
+
+
+            .scrollIcon{
+                display: none;
+            }
+            .logo{
+                width: unset;
+                height: 100%;
+                margin-bottom: unset;
+
+                img{
+                    width: unset;
+                    height: 100%;
+                }
+            }
+
+            .navItems{
+                display: flex;
+                width: 101%;
+                height: calc(100vh - 80px);
+                top: 80px;
+                left: 0;
+
+                background-color: white;
+
+    
+                transform: translate(100%,0);
+                transition: transform ease .3s;
+                position: absolute;
+                flex-wrap: wrap;
+                padding:100px 50px ;
+
+
+                align-content: flex-start;
+                
+
+                >a{
+                    width: 100%;
+                    color: black;
+                    writing-mode: unset;
+                    padding-top: unset;
+                    padding-left: 20px;
+
+                    margin: 20px 0;
+
+                    text-align: center;
+
+                    &::before{
+                        background-color: black;
+                        left: 0;
+                        top: calc(50% - 2.5px);
+                        display: none;      
+                    }
+
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.showBar{
+    nav{
+        transform: translate(0,0);
+    }
+    .menuBtn{
+        >div{
+            transition-delay: .5s;
+            background-color: black;
+        }
+    }
+}
+
+.decoLine{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    @include flex-style(space-around,space-around,flex-start,start,nowrap,nowrap);
+    // justify-content: space-around;
+    >div{
+        height: 100%;
+        width: 1px;
+        background-color: #ebebeb;
+    }
+}
+
+
+.menuActive{
+    overflow: hidden;
+    .menuBtn{
+        >div{
+            top: calc(50% - 1.5px);
+            transform-origin: center;
+            transform: rotate(45deg);
+            background-color: black;
+            
+        }
+        >:last-child{
+            width: 100%;
+            transform: rotate(-45deg);
+
+        }
+    }
+
+    >nav{
+        transform: translate(0,0);
+        transition: transform ease .3s;
+        >div{
+
+            .navItems{
+                transform: translate(0,0);
+                transition: transform ease .3s;
+                transition-delay: .3s;
+            }
+        }
+    }
+}
+
+
+// ---------------------------- gotop ---
+
+.gotop{
+    position: fixed;
+    right: -75px;
+    bottom: 30px;
+    z-index: 20;
+    width: 75px;
+    transition: .3s ease;
+    img{
+        width: 100%;
+    }
+    @media screen and (max-width:440px) {
+        width: 50px;
+    }
+}
+
+.show{
+    right: 30px;
+    @media screen and (max-width:440px) {
+        right: 20px;
+    }
+}
+
+.end{
+    // transform: scale(1.2);
+    bottom: 120px;
+    @media screen and (max-width:650px) {
+        bottom: 60px;
+    }
+
+    @media screen and (max-width: 440px) {
+        // bottom: 40px;
+    }
+}

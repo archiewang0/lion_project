@@ -1,0 +1,476 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+img {
+  display: block;
+  border: none;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html *,
+html *:before,
+html *:after {
+  font-size: 14px;
+  font-family: "Microsoft JhengHei", "Apple LiGothic Medium", "PMingLiU", "sans-serif", "serif";
+}
+
+.menuBtn {
+  display: none;
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  height: 40px;
+  width: 40px;
+  z-index: 12;
+}
+
+.menuBtn > div {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  top: 40%;
+  border-radius: 100px;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.menuBtn > :last-child {
+  width: 80%;
+  top: 70%;
+}
+
+@media screen and (max-width: 980px) {
+  .menuBtn {
+    display: block;
+  }
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 100vh;
+  z-index: 11;
+}
+
+nav > div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 25px;
+}
+
+nav > div .logo {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+nav > div .logo img {
+  width: 100%;
+}
+
+nav > div .navItems {
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -ms-flex-align: start;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+
+nav > div .navItems > a {
+  font-size: 22px;
+  color: white;
+  letter-spacing: 3.5px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  position: relative;
+  padding-top: 15px;
+  margin: 0 10px;
+}
+
+nav > div .navItems > a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  top: 0;
+  border-radius: 100%;
+  left: calc(50% - 2.5px);
+}
+
+nav > div .navItems > a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 95%;
+  width: 0px;
+  background-color: #a72a2e;
+  z-index: -1;
+  left: -3px;
+  top: 10px;
+  -webkit-transition: width ease .2s;
+  transition: width ease .2s;
+}
+
+nav > div .navItems > a:hover::after {
+  width: 15px;
+}
+
+nav > div .scrollIcon {
+  position: absolute;
+  bottom: 0;
+}
+
+nav > div .scrollIcon .text {
+  width: 12px;
+  margin: auto;
+  margin-bottom: 5px;
+  -webkit-transform: translate(2px, 0px);
+          transform: translate(2px, 0px);
+}
+
+nav > div .scrollIcon .text img {
+  width: 100%;
+}
+
+nav > div .scrollIcon .line {
+  height: 70px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: auto;
+  position: relative;
+}
+
+nav > div .scrollIcon .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: white;
+  left: -1.5px;
+  -webkit-animation-name: scrollDown;
+          animation-name: scrollDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 1400px) {
+  nav {
+    width: 240px;
+  }
+  nav > div .logo {
+    margin-bottom: 30px;
+  }
+  nav > div .scrollIcon .text {
+    width: 10px;
+  }
+  nav > div .scrollIcon .line {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  nav {
+    width: 100%;
+    height: 80px;
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%);
+    -webkit-transition: -webkit-transform ease .3s;
+    transition: -webkit-transform ease .3s;
+    transition: transform ease .3s;
+    transition: transform ease .3s, -webkit-transform ease .3s;
+    -webkit-transition-delay: .3s;
+            transition-delay: .3s;
+  }
+  nav > div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+  }
+  nav > div .scrollIcon {
+    display: none;
+  }
+  nav > div .logo {
+    width: unset;
+    height: 100%;
+    margin-bottom: unset;
+  }
+  nav > div .logo img {
+    width: unset;
+    height: 100%;
+  }
+  nav > div .navItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 101%;
+    height: calc(100vh - 80px);
+    top: 80px;
+    left: 0;
+    background-color: white;
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+    -webkit-transition: -webkit-transform ease .3s;
+    transition: -webkit-transform ease .3s;
+    transition: transform ease .3s;
+    transition: transform ease .3s, -webkit-transform ease .3s;
+    position: absolute;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 100px 50px;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  nav > div .navItems > a {
+    width: 100%;
+    color: black;
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+    padding-top: unset;
+    padding-left: 20px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  nav > div .navItems > a::before {
+    background-color: black;
+    left: 0;
+    top: calc(50% - 2.5px);
+    display: none;
+  }
+  nav > div .navItems > a::after {
+    display: none;
+  }
+}
+
+.showBar nav {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.showBar .menuBtn > div {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+  background-color: black;
+}
+
+.decoLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -ms-flex-align: start;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+
+.decoLine > div {
+  height: 100%;
+  width: 1px;
+  background-color: #ebebeb;
+}
+
+.menuActive {
+  overflow: hidden;
+}
+
+.menuActive .menuBtn > div {
+  top: calc(50% - 1.5px);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: black;
+}
+
+.menuActive .menuBtn > :last-child {
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menuActive > nav {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: -webkit-transform ease .3s;
+  transition: -webkit-transform ease .3s;
+  transition: transform ease .3s;
+  transition: transform ease .3s, -webkit-transform ease .3s;
+}
+
+.menuActive > nav > div .navItems {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: -webkit-transform ease .3s;
+  transition: -webkit-transform ease .3s;
+  transition: transform ease .3s;
+  transition: transform ease .3s, -webkit-transform ease .3s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.gotop {
+  position: fixed;
+  right: -75px;
+  bottom: 30px;
+  z-index: 20;
+  width: 75px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.gotop img {
+  width: 100%;
+}
+
+@media screen and (max-width: 440px) {
+  .gotop {
+    width: 50px;
+  }
+}
+
+.show {
+  right: 30px;
+}
+
+@media screen and (max-width: 440px) {
+  .show {
+    right: 20px;
+  }
+}
+
+.end {
+  bottom: 120px;
+}
+
+@media screen and (max-width: 650px) {
+  .end {
+    bottom: 60px;
+  }
+}
+/*# sourceMappingURL=layout.css.map */

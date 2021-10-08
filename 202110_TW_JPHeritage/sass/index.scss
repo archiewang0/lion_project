@@ -1,0 +1,294 @@
+@charset "utf-8";
+@import './mixin';
+
+
+.banner{
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+
+    .swiper-wrapper{
+        .swiper-slide{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .swiper-pagination{
+        top: 50%;
+        transform: translate(0,-50%);
+        right: 40px;
+        left: unset;
+        width: 85px;
+        height: 100%;
+        
+
+        position: absolute;
+        @include flex-style(center,center,center,center,wrap,wrap);
+        align-content: center;
+
+        >span{
+            display: block;
+            position: relative;
+            
+            opacity: 1;
+            width: 85px;
+            height: 85px;
+            
+
+            margin: 15px 0 !important;
+            background-color: transparent;
+            transition: background-color ease .5s ;
+            @include flex-style(center,center,center,center,nowrap,nowrap);
+
+            >div{
+                border-radius: 100%;
+                overflow: hidden;
+                width: 93%;
+                height: 93%;
+                background-color: black;
+
+                .text{
+                    position: absolute;
+                    width: 40%;
+                    
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    z-index: 1;
+                    opacity: 1;
+                    transition: opacity ease .3s;
+                }
+    
+                .bg{
+                    transition: opacity ease .3s;
+                    opacity: .5;
+                }
+            }
+
+
+
+        }
+
+        // active狀態
+        .swiper-pagination-bullet-active{
+            background-color: yellow;
+            
+            >div{
+                .text{
+                    opacity: 0;
+                }
+                .bg{
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+
+    .location{
+        position: absolute;
+        z-index: 1;
+        right: 50px;
+        left: unset;
+        bottom: 30px;
+
+        >div{
+            @include flex-style(flex-end,end,center,center,nowrap,nowrap);
+            img{
+                width: 14px;
+            }
+            p{
+                color: white;
+                letter-spacing: 1.5px;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                display: block;
+                height: 4px;
+                width: 100%;
+                background-color: yellow;
+                border-radius: 200px;
+                bottom: -7px;
+            }
+        }
+    }
+
+    >.title{
+        position: absolute;
+        width: 170px;
+
+        top: 0;
+        right: 10%;
+        left: unset;
+
+        z-index: 1;
+        .decoLine{
+            width: 1px;
+            height: 90px;
+            display: block;
+            margin: auto;
+            position: relative;
+            >span{
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+            }
+        }
+
+        >div{
+            width: 170px;
+            height: 170px;
+            margin: auto;
+            position: relative;
+
+            >div{
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                transform-origin: center;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                position: absolute;
+
+                @include  radius-dot-border;
+
+
+               
+            }
+
+            svg{
+                position: absolute;
+                width: 60px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                display: none;
+
+                filter: drop-shadow(2px 3px 3px rgba(0,0,0,0.5));
+                .cls-1{fill:#fff;}
+            }
+
+            .show{
+                display: block;
+            }
+
+        }
+
+        >p{
+            color: white;
+
+            writing-mode: vertical-lr;
+            font-size: 36px;
+
+            margin: auto;
+            margin-top: 28px;
+            height: 30vw;
+            letter-spacing: 5.5px;
+
+            text-shadow: -1px 1px 2px black;
+
+        }
+
+    }
+
+    .mLogo{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        width: 50vw;
+        height: 50vw;
+        display: none;
+
+        z-index: 1;
+    }
+
+ 
+    @media screen and (max-width: 1400px) {
+        .swiper-pagination{
+            >span{
+                margin: 5px 0 !important;
+            }
+        }
+
+        .title{
+            right: 15%;
+            .decoLine{
+                height: 40px;
+            }
+
+            >div{
+                width: 120px;
+                height: 120px;
+                svg{
+                    width: 50px;
+                }
+            }
+
+            >p{
+                margin-top: 20px;
+                letter-spacing: 2.5px;
+                font-size: 28px;
+            }
+        }
+
+
+    }
+
+    //手機板
+    @media screen and (max-width:980px) {
+        .mLogo{
+            display: block;
+        }
+
+        .location{
+            display: none;
+        }
+
+        .title{
+            top: 30%;
+            right: 10px;
+
+            .decoLine{
+                display: none;
+            }
+
+
+            .setTitle{
+                display: none;
+            }
+        }
+
+        .swiper-pagination{
+            right: 20px;
+            width: 30px;
+            align-content: flex-end;
+            padding-bottom: 20px;
+            >span{
+                width: 30px;
+                height: 30px;
+
+                background-color: rgba($color: #000000, $alpha: .5);
+
+                >div{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+.explore{
+    height: 2000px;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: .3);
+}

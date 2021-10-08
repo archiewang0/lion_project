@@ -1,0 +1,295 @@
+.banner {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.banner .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner .swiper-pagination {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 40px;
+  left: unset;
+  width: 85px;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.banner .swiper-pagination > span {
+  display: block;
+  position: relative;
+  opacity: 1;
+  width: 85px;
+  height: 85px;
+  margin: 15px 0 !important;
+  background-color: transparent;
+  -webkit-transition: background-color ease .5s;
+  transition: background-color ease .5s;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+
+.banner .swiper-pagination > span > div {
+  border-radius: 100%;
+  overflow: hidden;
+  width: 93%;
+  height: 93%;
+  background-color: black;
+}
+
+.banner .swiper-pagination > span > div .text {
+  position: absolute;
+  width: 40%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: opacity ease .3s;
+  transition: opacity ease .3s;
+}
+
+.banner .swiper-pagination > span > div .bg {
+  -webkit-transition: opacity ease .3s;
+  transition: opacity ease .3s;
+  opacity: .5;
+}
+
+.banner .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: yellow;
+}
+
+.banner .swiper-pagination .swiper-pagination-bullet-active > div .text {
+  opacity: 0;
+}
+
+.banner .swiper-pagination .swiper-pagination-bullet-active > div .bg {
+  opacity: 1;
+}
+
+.banner .location {
+  position: absolute;
+  z-index: 1;
+  right: 50px;
+  left: unset;
+  bottom: 30px;
+}
+
+.banner .location > div {
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -ms-flex-pack: end;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+
+.banner .location > div img {
+  width: 14px;
+}
+
+.banner .location > div p {
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+.banner .location > div::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: yellow;
+  border-radius: 200px;
+  bottom: -7px;
+}
+
+.banner > .title {
+  position: absolute;
+  width: 170px;
+  top: 0;
+  right: 10%;
+  left: unset;
+  z-index: 1;
+}
+
+.banner > .title .decoLine {
+  width: 1px;
+  height: 90px;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.banner > .title .decoLine > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.banner > .title > div {
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  position: relative;
+}
+
+.banner > .title > div > div {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='5' stroke-dasharray='9' stroke-dashoffset='78' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 100%;
+}
+
+.banner > .title > div svg {
+  position: absolute;
+  width: 60px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  -webkit-filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.5));
+}
+
+.banner > .title > div svg .cls-1 {
+  fill: #fff;
+}
+
+.banner > .title > div .show {
+  display: block;
+}
+
+.banner > .title > p {
+  color: white;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 36px;
+  margin: auto;
+  margin-top: 28px;
+  height: 30vw;
+  letter-spacing: 5.5px;
+  text-shadow: -1px 1px 2px black;
+}
+
+.banner .mLogo {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 50vw;
+  height: 50vw;
+  display: none;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1400px) {
+  .banner .swiper-pagination > span {
+    margin: 5px 0 !important;
+  }
+  .banner .title {
+    right: 15%;
+  }
+  .banner .title .decoLine {
+    height: 40px;
+  }
+  .banner .title > div {
+    width: 120px;
+    height: 120px;
+  }
+  .banner .title > div svg {
+    width: 50px;
+  }
+  .banner .title > p {
+    margin-top: 20px;
+    letter-spacing: 2.5px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .banner .mLogo {
+    display: block;
+  }
+  .banner .location {
+    display: none;
+  }
+  .banner .title {
+    top: 30%;
+    right: 10px;
+  }
+  .banner .title .decoLine {
+    display: none;
+  }
+  .banner .title .setTitle {
+    display: none;
+  }
+  .banner .swiper-pagination {
+    right: 20px;
+    width: 30px;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    padding-bottom: 20px;
+  }
+  .banner .swiper-pagination > span {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .banner .swiper-pagination > span > div {
+    display: none;
+  }
+}
+
+.explore {
+  height: 2000px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=index.css.map */
