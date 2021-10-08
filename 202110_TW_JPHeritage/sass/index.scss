@@ -205,7 +205,6 @@
         left: 20px;
         bottom: 20px;
         width: 50vw;
-        height: 50vw;
         display: none;
 
         z-index: 1;
@@ -245,8 +244,10 @@
 
     //手機板
     @media screen and (max-width:980px) {
+        height: 94vh;
         .mLogo{
             display: block;
+            bottom: 40px;
         }
 
         .location{
@@ -269,12 +270,13 @@
 
         .swiper-pagination{
             right: 20px;
-            width: 30px;
+            width: 10px;
             align-content: flex-end;
-            padding-bottom: 20px;
+            padding-bottom: 40px;
+            
             >span{
-                width: 30px;
-                height: 30px;
+                width: 10px;
+                height: 10px;
 
                 background-color: rgba($color: #000000, $alpha: .5);
 
@@ -288,7 +290,446 @@
 
 
 .explore{
-    height: 2000px;
-    width: 100%;
-    background-color: rgba($color: #000000, $alpha: .3);
+    padding-top: 66px;
+    position: relative;
+    z-index: 1;
+    >div{
+        .title{
+            max-width: 355px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 50px;
+            position: relative;
+            img{
+                width: 100%;
+            }
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 115px;
+                height: 140px;
+                background: url('../img/_icon.svg') no-repeat center center;
+                left: 50%;
+                top: 0;
+                z-index: 100;
+
+                transform: translate(25vw,-10px);
+            }
+        }
+
+        
+        .article{
+            @include flex-style(center,center,center,center,nowrap,nowrap);
+            margin-bottom: 140px;
+
+            >*{
+                width: 50%;
+            }
+
+            .content{
+
+                >div{
+                    max-width: 380px;
+                    margin-left: auto;
+                    margin-right: 50px;
+                    position: relative;
+
+                    .subtitle{
+                        max-width: 150px;
+                        position: relative;
+                        margin-bottom: 22px;
+
+                        &::after{
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            height: 1px;
+                            width: 150px;
+                            background-color: #a70a0a;
+                            right: -15px;
+                            bottom: 0;
+                            transform: translate(100%,0);
+                        }
+
+                    }
+
+                    .paragraph{
+                        font-size: 16px;
+                        line-height: 1.8;
+                        text-indent: 16px;
+                        letter-spacing: 2px;
+                        >p{
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    // 旁邊的雲朵裝飾
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width:  15vw;
+                        height: 8vw;
+                        background: url('../img/_decoImg.svg') no-repeat center center;
+                        bottom: 0;
+                        left: 0;
+                        transform: translate(-100%,100%);
+
+                    }
+
+                }
+            }
+
+            figure{
+                padding-left: 10px;
+                position: relative;
+
+                img{
+                    width: 100%;
+                }
+
+                .decoText{
+                    display: block;
+                    width: 23vw;
+                    height: 13vw;
+                    left: 0;
+                    bottom: 0;
+
+                    transform: translate(-20%,50%);
+
+
+                    position: absolute;
+                }
+            }
+
+        }
+
+        .artiRight{
+            align-items: flex-start;
+            margin-bottom: 18vw;
+            .content{
+                order: 2;
+                padding-top: 50px;
+                >div{
+                    margin-right: auto;
+                    margin-left: 50px;
+
+                    // 雲朵裝飾
+                    &::after{
+                        top: 50%;
+                        bottom: unset;
+                        left: auto;
+                        right: 0;
+                        background-image: url('../img/_decoImg2.svg');
+                        transform: translate(120%, 30%);
+                    }
+                }
+            }
+            figure{
+                padding-left: unset;
+                padding-right: 10px;
+                .decoText{
+                    left: unset;
+                    right: 0px;
+                    transform: translate(30%,50%);
+                }
+            }
+        }
+
+        // >:last-child{
+        //     margin-bottom: ;
+        // }
+    }
+
+
+    @media screen and (max-width:1400px) {
+        padding-top: 40px;
+        >div{
+            .title{
+                max-width: 300px;
+
+                &::after{
+                    width: 100px;
+                    height: 120px;
+                }
+            }
+
+            .artiRight{
+                margin-bottom: 140px;
+            }
+        }
+    }
+}
+
+
+@keyframes autoPlay {
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-50%,0);
+    }
+}
+
+
+.mapBlock{
+    position: relative; // 以最mapBlock 為基準
+    z-index: 1;
+
+    // 背景紅色色塊
+    >div{
+        background-color: #a72a2e;
+        position: relative;
+
+        // 背景黃色色塊
+        .container{
+            // width: 50%;
+            position: relative;
+            top: -100px;
+
+            
+            max-width: 930px;
+            width: 100%;
+            padding: 25px;
+
+            margin-right: 10%;
+            margin-left: auto;
+            background-color: #f3db23;
+            box-shadow: 10px 20px 30px 1px rgba(0, 0, 0, 0.3);
+
+            .map{
+                position: absolute;
+                width: 30vw;
+                top: 0;
+                left: 0px;
+                transform: translate(-70%,0);
+                z-index: 2;
+            }
+
+            .description{
+                max-width: 525px;
+                width: 100%;
+                margin: auto;
+                position: relative;
+                padding-bottom: 60px;
+
+                .title{
+                    max-width: 460px;
+                    width: 100%;
+                    margin: auto;
+                    margin-bottom: 40px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                >p{
+                    font-size: 16px;
+                    line-height: 1.8;
+                    letter-spacing: 1.5px;
+                }
+                .question{
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: bold;
+                    position: relative;
+                    z-index: 1;
+                    &::before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: 2px;
+                        left: 50%;
+                        transform: translate(-50%,0);
+                        width: 110%;
+                        height: 15px;
+                        border-radius: 100px;
+                        background-color: #fbf2ac;
+                        z-index: -1;
+                    }
+                }
+                .detailBtn{
+                    width: 200px;
+                    height: 45px;
+                    border: 1px solid black;
+                    margin-top: 40px;
+                    @include flex-style(center,center,center,center,nowrap,nowrap);                   
+
+                    >img{
+                        max-width: 95px;
+                        width: 100%;
+                    }
+                }
+
+       
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 115px;
+                    height: 140px;
+                    background: url('../img/_icon.svg');
+                    bottom: 0;
+                    right: 0;
+
+                }
+            }
+            .dummyBlock{
+                height: 25vw;
+            }
+        }
+
+        .carousel{
+            position: absolute;
+            z-index: 1;
+            bottom: .4vw;
+            right: 0;
+
+            height: 30vw;
+            width: 65vw;
+
+            // background-color: rgba(0, 128, 0, 0.24);
+            overflow: hidden;
+
+            .itemContainer{
+                @include flex-style(flex-start,start,center,center,nowrap,nowrap);
+                width: 400%;
+
+                animation-name: autoPlay;
+                animation-duration: 25s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+
+                >div{
+                    width: calc(calc(100% / 8) - 10px);
+                    margin: 5px;
+                    position: relative;
+                    >img{
+                        border-radius: 10px;
+                        width: 100%;
+                    }
+                    >a{
+                        width:35%;
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        background-color: rgba($color: white, $alpha: .8);
+                        padding: 1.4vw;
+                        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='black' stroke-width='2' stroke-dasharray='5%2c 5%2c 5%2c 5' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+                        border-radius: 100px;
+                        
+                        >img{
+                            width: 100%;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1400px) {
+        >div{
+            .container{
+                max-width: 700px;
+                margin-right: 5%;
+
+                .description{
+                    max-width: 500px;
+                    .title{
+                        max-width: 400px;
+                        margin-bottom: 30px;
+                    }
+                    .detailBtn{
+                        width: 180px;
+                        height: 40px;
+                    }
+                }
+            }
+            .carousel{
+                bottom: 3vw;
+
+            }
+        }
+    }
+}
+
+
+
+.videoSection{
+    padding-top: 70px;
+    position: relative;
+    z-index: 1;
+    div{
+        .title{
+            max-width: 380px;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 60px;
+            @include flex-style(center,center,center,center,wrap,wrap);
+            position: relative;
+
+            >img{
+                width: 100%;
+            }
+            .decoText{
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                width: 260px;
+                transform: translate(-50%,20%);
+            }
+
+            >p{
+                margin-top: 20px;
+                font-size: 28px;
+                font-weight: bold;
+                letter-spacing: 3.5px;
+                position: relative;
+
+                &::before, &::after{
+                    content: "";
+                    display: block;
+                    top: 50%;
+                    width: 40px;
+                    height: 2px;
+                    position: absolute;
+                    background-color: black;
+                }
+
+                &::before{
+                    left: -10px;
+                    transform: translate(-100%,0);
+                }
+                &::after{
+                    right: -10px;
+                    transform: translate(100%,0);
+                }
+            }
+        }
+
+
+        .videoContainer{
+            width: 150%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0px);
+
+            .swiper-wrapper{
+                .swiper-slide{
+                    border-radius: 30px;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+
+                }
+            }
+
+        }
+    }
+
 }

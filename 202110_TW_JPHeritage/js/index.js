@@ -133,7 +133,7 @@ window.addEventListener('load',function(){
     secondBlockTop = window.scrollY + document.querySelector('.explore').getBoundingClientRect().y
     console.log(secondBlockTop)
 
-    if(  secondBlockTop < window.scrollY ){
+    if(  secondBlockTop < window.scrollY+50 ){
         body.classList.add('showBar')
     }
 })
@@ -144,7 +144,7 @@ window.addEventListener('scroll',function(){
     
     const bodyClassBeSet = body.getAttribute('class')
 
-    if(secondBlockTop < y   ){
+    if(secondBlockTop < y + 50  ){
         body.classList.add('showBar')
     } else {
         body.classList.remove('showBar')
@@ -154,11 +154,43 @@ window.addEventListener('scroll',function(){
 
 
 
+function copyCarouselItem(){
+    let container = document.querySelector('.itemContainer')
+    let items = container.querySelectorAll('div')
+    items = Array.from(items)
+
+    console.log(items)
+    items.forEach((item)=>{
+        container.appendChild(item)
+    })
+
+    // 將內容挖出 在建立新的div 放入在塞回 container
+    items.forEach((item)=>{
+        let clone = item.cloneNode(true);
+        container.appendChild(clone)
+    })
+}
+
+copyCarouselItem()
 
 
 
 
-// console.log(menuBtn)
+const swiperVideo = new Swiper('.videoContainer', {
+    loop: true,
+    slidesPerView: 3,
+    centeredSlides: true,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    // autoplay: {
+    //     // delay: 5000,
+    //     // disableOnInteraction: false,
+    //     // 進行別的動做 click 還會繼續 autoplay
+    // },
 
+});
 
 // console.log(document.querySelector)
