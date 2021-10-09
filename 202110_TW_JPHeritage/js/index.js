@@ -33,7 +33,7 @@ const swiper = new Swiper('.banner', {
         disableOnInteraction: false,
         // 進行別的動做 click 還會繼續 autoplay
     },
-  
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -180,11 +180,11 @@ const swiperVideo = new Swiper('.videoContainer', {
     loop: true,
     slidesPerView: 3,
     centeredSlides: true,
-    spaceBetween: 30,
+    spaceBetween: 100,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
+    },
     // autoplay: {
     //     // delay: 5000,
     //     // disableOnInteraction: false,
@@ -194,3 +194,40 @@ const swiperVideo = new Swiper('.videoContainer', {
 });
 
 // console.log(document.querySelector)
+
+const swiperLionInfo = new Swiper('.imgCarousel',{
+    loop: true,
+    effect: 'fade',
+    pagination: {
+        clickable: true,
+        el: '.swiper-pagination',
+
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        // 進行別的動做 click 還會繼續 autoplay
+    },
+})
+
+
+// 錨點下滑
+// $("a[href^=#]").click(function(){
+//     $("html,body").stop().animate({scrollTop:$(this.hash).offset().top},800);
+//     return false;
+// });
+
+// 錨點下滑
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // 抓到 錨點 連到的element
+        const getTargetElement = document.querySelector(this.getAttribute('href'))
+        // scrollIntoView 使用在element 身上
+        getTargetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+

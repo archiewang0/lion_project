@@ -97,6 +97,7 @@ html *:after {
 
 body {
   overflow-x: hidden;
+  background-color: white;
   position: relative;
 }
 
@@ -133,7 +134,7 @@ body {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 265px;
