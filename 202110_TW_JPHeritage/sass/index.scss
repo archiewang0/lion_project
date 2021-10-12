@@ -498,7 +498,6 @@
                             }
                         }
                         .paragraph{
-                          
                         }
                         &::after{
                             display: none;
@@ -749,6 +748,7 @@
 
     @media screen and (max-width:980px) {
         >div{
+            padding-bottom: 50px;
             .container{
                 background-color: unset;
                 box-shadow: unset;
@@ -762,7 +762,6 @@
                 .description{
                     background-color: #f3db23;
                     box-shadow: 10px 20px 30px 1px rgba(0, 0, 0, 0.3);
-       
                     padding: 15px;
 
                     .detailBtn{
@@ -770,6 +769,27 @@
                     }
                     &::after{
                         display: none;
+                    }
+                }
+
+                .dummyBlock{
+                    display: none;
+                }
+            }
+            .carousel{
+                position: relative;
+                width: 100%;
+                bottom: unset;
+                left: unset;
+                height: unset;
+                overflow: unset;
+                .itemContainer{
+                    >div{
+                        margin: 2px;
+                        >a{
+                            width: 60%;
+                            padding: 15px;
+                        }
                     }
                 }
             }
@@ -915,6 +935,52 @@
         }
     }
 
+    @media screen and(max-width:980px) {
+        padding-top: 50px;
+        >div{
+            .title{
+                max-width: 260px;
+                margin-bottom: 30px;
+                >p{
+                    margin-top: 15px;
+                    font-size: 20px;
+                }
+                .decoText{
+                    display: none;
+                }
+            }
+
+            .videoContainer{
+                width: 90%;
+                margin-bottom: 50px;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        p{
+                            line-height: 1.2;
+                        }
+                        &::after{
+                            width: 22vw;
+                            height: 22vw;
+                            top: 37%
+                        }
+                    }
+                }
+                .controlBtn{
+                    width: 100%;
+                    top: 35%;
+                    .swiper-button-next,.swiper-button-prev{
+                        height: 50px
+                    }
+                    .swiper-button-prev{
+                        left: 0;
+                    }
+                    .swiper-button-next{
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -1071,6 +1137,48 @@
             }
         }
     }
+
+    @media screen and (max-width:980px) {
+        .title{
+            >div{
+                >img{
+                    max-width: 200px;
+                }
+                &::after{
+                    display: none;
+                }
+            }
+        }
+
+        .article{
+            padding: 20px;
+            flex-wrap: wrap;
+            .imgContainer{
+                width: 100%;
+
+                .imgCarousel{
+                    right: -20px;
+                    .swiper-pagination{
+                        padding-right: 25px;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+
+            .paragraph{
+                width: 100%;
+                >div{
+                    >img{
+                        margin: auto;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -1140,7 +1248,7 @@
                     margin: auto;
                 }
 
-                .WLdecoText,.location,>a,.decoCloud{
+                .WLdecoText,.location,.videoPlay,.decoCloud{
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -1197,7 +1305,7 @@
                 }
 
                 // 對其基準 location 微調
-                >a{
+                .videoPlay{
                     width: 190px;
                     height: 45px;
                     border: 2px solid #a70a0a;
@@ -1263,6 +1371,8 @@
                 }
             }
         }
+
+        
     }
 
     @media screen and (max-width:1400px) {
@@ -1296,6 +1406,8 @@
             }
         }
     }
+
+
 }
 
 .foodBlock{

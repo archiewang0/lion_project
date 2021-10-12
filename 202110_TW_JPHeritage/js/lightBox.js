@@ -18,7 +18,7 @@ playVideos.forEach(function(item){
 
         let link = this.dataset.link
 
-        console.log(videoLightIframe)
+        // console.log(videoLightIframe.contentWindow.querySelector('iframe'))
 
         let iframeInsideIframe = videoLightIframe.contentWindow.document.body.querySelector('iframe')
 

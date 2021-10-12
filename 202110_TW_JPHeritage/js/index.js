@@ -175,7 +175,7 @@ copyCarouselItem()
 
 const swiperVideo = new Swiper('.videoContainer', {
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 100,
     navigation: {
@@ -187,7 +187,13 @@ const swiperVideo = new Swiper('.videoContainer', {
     //     // disableOnInteraction: false,
     //     // 進行別的動做 click 還會繼續 autoplay
     // },
-
+    breakpoints: {
+        // when window width is >= 320px
+        980: {
+            slidesPerView: 3,
+            spaceBetween: 100
+        },
+    }
 });
 
 // console.log(document.querySelector)
@@ -218,8 +224,12 @@ const swiperLionInfo = new Swiper('.imgCarousel',{
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        html.classList.toggle('menuActive')
-        body.classList.toggle('menuActive')
+
+        if (window.innerWidth < 980){
+            html.classList.toggle('menuActive')
+            body.classList.toggle('menuActive')
+        }
+    
 
         // 抓到 錨點 連到的element
         const getTargetElement = document.querySelector(this.getAttribute('href'))

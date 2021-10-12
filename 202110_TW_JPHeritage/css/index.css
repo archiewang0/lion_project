@@ -832,6 +832,9 @@
 }
 
 @media screen and (max-width: 980px) {
+  .mapBlock > div {
+    padding-bottom: 50px;
+  }
   .mapBlock > div .container {
     background-color: unset;
     -webkit-box-shadow: unset;
@@ -856,6 +859,24 @@
   }
   .mapBlock > div .container .description::after {
     display: none;
+  }
+  .mapBlock > div .container .dummyBlock {
+    display: none;
+  }
+  .mapBlock > div .carousel {
+    position: relative;
+    width: 100%;
+    bottom: unset;
+    left: unset;
+    height: unset;
+    overflow: unset;
+  }
+  .mapBlock > div .carousel .itemContainer > div {
+    margin: 2px;
+  }
+  .mapBlock > div .carousel .itemContainer > div > a {
+    width: 60%;
+    padding: 15px;
   }
 }
 
@@ -997,6 +1018,48 @@
 .videoSection div .videoContainer .controlBtn .swiper-button-prev {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+@media screen and (max-width: 980px) {
+  .videoSection {
+    padding-top: 50px;
+  }
+  .videoSection > div .title {
+    max-width: 260px;
+    margin-bottom: 30px;
+  }
+  .videoSection > div .title > p {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .videoSection > div .title .decoText {
+    display: none;
+  }
+  .videoSection > div .videoContainer {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  .videoSection > div .videoContainer .swiper-wrapper .swiper-slide p {
+    line-height: 1.2;
+  }
+  .videoSection > div .videoContainer .swiper-wrapper .swiper-slide::after {
+    width: 22vw;
+    height: 22vw;
+    top: 37%;
+  }
+  .videoSection > div .videoContainer .controlBtn {
+    width: 100%;
+    top: 35%;
+  }
+  .videoSection > div .videoContainer .controlBtn .swiper-button-next, .videoSection > div .videoContainer .controlBtn .swiper-button-prev {
+    height: 50px;
+  }
+  .videoSection > div .videoContainer .controlBtn .swiper-button-prev {
+    left: 0;
+  }
+  .videoSection > div .videoContainer .controlBtn .swiper-button-next {
+    right: 0;
+  }
 }
 
 .lionInfo .title {
@@ -1195,6 +1258,40 @@
   margin-left: auto;
 }
 
+@media screen and (max-width: 980px) {
+  .lionInfo .title > div > img {
+    max-width: 200px;
+  }
+  .lionInfo .title > div::after {
+    display: none;
+  }
+  .lionInfo .article {
+    padding: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .lionInfo .article .imgContainer {
+    width: 100%;
+  }
+  .lionInfo .article .imgContainer .imgCarousel {
+    right: -20px;
+  }
+  .lionInfo .article .imgContainer .imgCarousel .swiper-pagination {
+    padding-right: 25px;
+  }
+  .lionInfo .article .imgContainer .imgCarousel::after {
+    display: none;
+  }
+  .lionInfo .article .paragraph {
+    width: 100%;
+  }
+  .lionInfo .article .paragraph > div > img {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
 .wheresLion > div .title {
   max-width: 286px;
   width: 100%;
@@ -1274,7 +1371,7 @@
   margin: auto;
 }
 
-.wheresLion .lionContainer .swiper-wrapper .swiper-slide .WLdecoText, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .location, .wheresLion .lionContainer .swiper-wrapper .swiper-slide > a, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .decoCloud {
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .WLdecoText, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .location, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .videoPlay, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .decoCloud {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1340,7 +1437,7 @@
           transform: translate(22vw, 0);
 }
 
-.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a {
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .videoPlay {
   width: 190px;
   height: 45px;
   border: 2px solid #a70a0a;
@@ -1360,15 +1457,15 @@
   -ms-flex-wrap: nowrap;
 }
 
-.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a > img {
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .videoPlay > img {
   height: 14px;
 }
 
-.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a > :last-child {
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .videoPlay > :last-child {
   margin-left: 12px;
 }
 
-.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a:hover > img {
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .videoPlay:hover > img {
   -webkit-animation-name: run;
           animation-name: run;
   -webkit-animation-timing-function: ease-in-out;
