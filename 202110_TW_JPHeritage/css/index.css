@@ -468,6 +468,68 @@
   }
 }
 
+@media screen and (max-width: 980px) {
+  .explore > div {
+    padding: 20px;
+  }
+  .explore > div .title {
+    max-width: 210px;
+    margin-bottom: 30px;
+  }
+  .explore > div .title::after {
+    display: none;
+  }
+  .explore > div .article {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  .explore > div .article figure {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    padding: unset;
+  }
+  .explore > div .article figure .decoText {
+    display: none;
+  }
+  .explore > div .article .content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .explore > div .article .content > div {
+    max-width: unset;
+    width: 100%;
+  }
+  .explore > div .article .content > div .subtitle {
+    max-width: 130px;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .explore > div .article .content > div .subtitle::after {
+    display: none;
+  }
+  .explore > div .article .content > div::after {
+    display: none;
+  }
+  .explore > div .artiRight {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 50px;
+  }
+  .explore > div .artiRight .content {
+    padding-top: unset;
+  }
+  .explore > div .artiRight .content > div {
+    margin-left: unset;
+  }
+}
+
 @-webkit-keyframes autoPlay {
   0% {
     -webkit-transform: translate(0, 0);
@@ -497,23 +559,23 @@
     opacity: 1;
   }
   30% {
-    -webkit-transform: translate(300%, 0);
-            transform: translate(300%, 0);
+    -webkit-transform: translate(300px, 0);
+            transform: translate(300px, 0);
     opacity: 1;
   }
   31% {
-    -webkit-transform: translate(300%, 0);
-            transform: translate(300%, 0);
+    -webkit-transform: translate(300px, 0);
+            transform: translate(300px, 0);
     opacity: 0;
   }
   32% {
-    -webkit-transform: translate(-300%, 0);
-            transform: translate(-300%, 0);
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
     opacity: 0;
   }
   33% {
-    -webkit-transform: translate(-300%, 0);
-            transform: translate(-300%, 0);
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
     opacity: 1;
   }
   60% {
@@ -530,23 +592,23 @@
     opacity: 1;
   }
   30% {
-    -webkit-transform: translate(300%, 0);
-            transform: translate(300%, 0);
+    -webkit-transform: translate(300px, 0);
+            transform: translate(300px, 0);
     opacity: 1;
   }
   31% {
-    -webkit-transform: translate(300%, 0);
-            transform: translate(300%, 0);
+    -webkit-transform: translate(300px, 0);
+            transform: translate(300px, 0);
     opacity: 0;
   }
   32% {
-    -webkit-transform: translate(-300%, 0);
-            transform: translate(-300%, 0);
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
     opacity: 0;
   }
   33% {
-    -webkit-transform: translate(-300%, 0);
-            transform: translate(-300%, 0);
+    -webkit-transform: translate(-300px, 0);
+            transform: translate(-300px, 0);
     opacity: 1;
   }
   60% {
@@ -769,6 +831,34 @@
   }
 }
 
+@media screen and (max-width: 980px) {
+  .mapBlock > div .container {
+    background-color: unset;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    top: unset;
+  }
+  .mapBlock > div .container .map {
+    position: relative;
+    -webkit-transform: unset;
+            transform: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .mapBlock > div .container .description {
+    background-color: #f3db23;
+    -webkit-box-shadow: 10px 20px 30px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 10px 20px 30px 1px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+  }
+  .mapBlock > div .container .description .detailBtn {
+    margin: 20px auto;
+  }
+  .mapBlock > div .container .description::after {
+    display: none;
+  }
+}
+
 .videoSection {
   padding-top: 70px;
   position: relative;
@@ -850,15 +940,6 @@
   position: relative;
 }
 
-.videoSection div .videoContainer .swiper-wrapper .swiper-slide .playBtn {
-  position: absolute;
-  width: 100px;
-  left: 50%;
-  top: 45%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .videoSection div .videoContainer .swiper-wrapper .swiper-slide img {
   width: 100%;
   border-radius: 20px;
@@ -870,6 +951,20 @@
   font-size: 20px;
   margin-top: 25px;
   font-weight: bold;
+}
+
+.videoSection div .videoContainer .swiper-wrapper .swiper-slide::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url("../img/_playIcon.svg") no-repeat center center;
+  background-size: cover;
 }
 
 .videoSection div .videoContainer .controlBtn {
@@ -1098,5 +1193,374 @@
 
 .lionInfo .right .paragraph > div img {
   margin-left: auto;
+}
+
+.wheresLion > div .title {
+  max-width: 286px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  position: relative;
+}
+
+.wheresLion > div .title > img {
+  width: 100%;
+}
+
+.wheresLion > div .title .decoText {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0%;
+  width: 360px;
+  -webkit-transform: translate(-25%, -30%);
+          transform: translate(-25%, -30%);
+}
+
+.wheresLion > div .title > p {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3.5px;
+  position: relative;
+}
+
+.wheresLion > div .title > p::before, .wheresLion > div .title > p::after {
+  content: "";
+  display: block;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  position: absolute;
+  background-color: black;
+}
+
+.wheresLion > div .title > p::before {
+  left: -10px;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.wheresLion > div .title > p::after {
+  right: -10px;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.wheresLion .lionContainer {
+  padding-bottom: 50px;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide {
+  visibility: hidden;
+  height: 36vw;
+  position: relative;
+  margin-top: 20px;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide > img {
+  height: 100%;
+  margin: auto;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .WLdecoText, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .location, .wheresLion .lionContainer .swiper-wrapper .swiper-slide > a, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .decoCloud {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .WLdecoText {
+  font-size: 28px;
+  letter-spacing: 4px;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  height: 100%;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .textLeft1 {
+  -webkit-transform: translate(-32vw, -18vw);
+          transform: translate(-32vw, -18vw);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .textLeft2 {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: translate(calc(-32vw + 50px), calc(-18vw + 50px));
+          transform: translate(calc(-32vw + 50px), calc(-18vw + 50px));
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .texRight1 {
+  -webkit-transform: translate(28vw, -18vw);
+          transform: translate(28vw, -18vw);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .texRight2 {
+  -webkit-transform: translate(calc(28vw + 50px), calc(-18vw + 50px));
+          transform: translate(calc(28vw + 50px), calc(-18vw + 50px));
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .location {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-transform: translate(25vw, calc(18vw - 25px));
+          transform: translate(25vw, calc(18vw - 25px));
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .decoCloud {
+  width: 250px;
+  z-index: -1;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .DCright {
+  -webkit-transform: translate(calc(-32vw - 100px), calc(-20vw + 50px)) rotateY(180deg);
+          transform: translate(calc(-32vw - 100px), calc(-20vw + 50px)) rotateY(180deg);
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide .DCleft {
+  -webkit-transform: translate(22vw, 0);
+          transform: translate(22vw, 0);
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a {
+  width: 190px;
+  height: 45px;
+  border: 2px solid #a70a0a;
+  -webkit-transform: translate(25vw, 18vw);
+          transform: translate(25vw, 18vw);
+  overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a > img {
+  height: 14px;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a > :last-child {
+  margin-left: 12px;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide > a:hover > img {
+  -webkit-animation-name: run;
+          animation-name: run;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.wheresLion .lionContainer .swiper-wrapper .swiper-slide-active {
+  visibility: visible;
+}
+
+.wheresLion .lionContainer .swiper-pagination {
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+
+.wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet {
+  margin: 22px;
+  height: 115px;
+  width: unset;
+  background-color: unset;
+  opacity: 1;
+  position: relative;
+}
+
+.wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet > img {
+  height: 100%;
+}
+
+.wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet::after {
+  opacity: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f3db23;
+  top: 50%;
+  right: 10%;
+  z-index: -1;
+  border-radius: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet-active::after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1400px) {
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide .WLdecoText {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide > a {
+    width: 180px;
+    height: 40px;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide > a > img {
+    height: 11px;
+  }
+  .wheresLion .lionContainer .swiper-pagination {
+    margin-top: 80px;
+  }
+  .wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet {
+    height: 90px;
+  }
+  .wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet::after {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.foodBlock {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.foodBlock > div {
+  width: 60%;
+  background-color: #a72a2e;
+}
+
+.foodBlock > div figure {
+  margin-left: auto;
+  margin-right: 70px;
+  max-width: 40vw;
+  width: 100%;
+  position: relative;
+  top: -80px;
+  -webkit-box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+.foodBlock > div figure > img {
+  width: 100%;
+}
+
+.foodBlock > div figure > a {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  -webkit-transform: translate(calc(100% + 9vw));
+          transform: translate(calc(100% + 9vw));
+}
+
+.foodBlock > div figure > a > p {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.foodBlock > div figure > a > div {
+  width: 150px;
+  height: 150px;
+  padding: 25px;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  position: relative;
+}
+
+.foodBlock > div figure > a > div > img {
+  height: 100%;
+  margin: auto;
+}
+
+.foodBlock > div figure > a > div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='black' stroke-width='5' stroke-dasharray='9' stroke-dashoffset='78' stroke-linecap='butt'/%3e%3c/svg%3e");
+  top: 0;
+  left: 0;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.foodBlock > div figure > a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10vw;
+  height: 1px;
+  background-color: black;
+  top: 30%;
+  left: 0;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+
+.foodBlock > div figure > a:hover > div {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.foodBlock > div figure > a:hover > div::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.foodBlock > div figure::after {
+  content: "";
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  background: url("../img/_decoText6.svg") no-repeat center center;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(-15%, 80px);
+          transform: translate(-15%, 80px);
+}
+
+@media screen and (max-width: 1400px) {
+  .foodBlock > div figure {
+    max-width: 45vw;
+  }
 }
 /*# sourceMappingURL=index.css.map */

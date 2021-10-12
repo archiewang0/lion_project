@@ -65,8 +65,7 @@ body{
 }
 
 nav{
-    position: fixed;
-    
+    position: absolute;
     
     left: 0;
     top: 0;
@@ -184,7 +183,6 @@ nav{
         }
 
     }
-    
 
     @media screen and (max-width:1400px) {
         width: 240px;
@@ -283,6 +281,8 @@ nav{
             }
         }
     }
+
+
 }
 
 .showBar{
@@ -317,7 +317,6 @@ nav{
     }
 }
 
-
 .menuActive{
     overflow: hidden;
     .menuBtn{
@@ -350,6 +349,104 @@ nav{
 }
 
 
+footer{
+    >*{
+        >div{
+            max-width: 965px;
+            width: 100%;
+            margin: auto;
+            p,a{
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.8;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    
+    .info{
+        width: 100%;
+        padding: 50px 20px;
+        padding-bottom: 30px;
+        background-color: #3c3333;
+        >div{
+            .links{
+                margin-top: 40px;
+                @include flex-style(space-between,space-between,flex-start,start,wrap,wrap);
+                >a{
+                    padding: 18px;
+                    border: 3px solid white;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        width: 100%;
+        padding: 15px 20px;
+        background-color: #1c1717;
+        >div{
+            >p{
+                text-align: center;
+            }
+        }
+    }
+    
+}
+
+
+.videoLightbox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    .closeBtn{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 30px;
+        top: 30px; 
+
+        &::after,&::before{
+            content: "";
+            display: block;
+
+            width: 100%;
+            position: absolute;
+            background-color: white;
+            left: 50%;
+            top: 50%;
+            height: 1px;
+            transform-origin: left;
+        }
+
+        &::after{
+            transform: rotate(45deg) translate(-50%,0);
+        }
+        &::before{
+            transform: rotate(-45deg)  translate(-50%,0);
+        }
+    }
+}
+
+.videoOpen{
+    overflow: hidden;
+    .videoLightbox{
+        display: block;
+    }
+}
 
 
 

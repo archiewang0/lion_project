@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/layout.css">
         <link rel="stylesheet" href="./css/index.css">
     </head>
-<body  >
+<body >
 
     <a href="javascript:;" class="menuBtn">
         <div></div>
@@ -29,7 +29,7 @@
                 <a href="#explore">探索文化財</a>        
                 <a href="javascript:;">砂波雪獅食</a>
                 <a href="#videoSection">影片故事</a>
-                <a href="javascript:;">麒麟獅子巡禮</a>
+                <a href="#whereLion">麒麟獅子巡禮</a>
             </div>
 
             <div class="scrollIcon">
@@ -286,21 +286,22 @@
             <div class="videoContainer">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <a class="swiper-slide" href="javascript:;"> 
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/oMfSqKzJTaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <!-- youtube link 寫在data-link上面 -->
+                    <a class="swiper-slide videoPlay" href="javascript:;" data-link="https://www.youtube.com/embed/oMfSqKzJTaQ"> 
                         <img src="./img/video2.jpeg" alt="">
-                        <img src="./img/_playIcon.svg" alt="" class="playBtn">
                         <p> 日本遺產STORY 繁體中文PR影片(日本遺産「麒麟のまち」推進協議会)</p>
                     </a>
-                    <a class="swiper-slide" href="javascript:;">
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/0IT1OJUy1SY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <a class="swiper-slide videoPlay" href="javascript:;" data-link="https://www.youtube.com/embed/0IT1OJUy1SY">
                         <img src="./img/video3.jpeg" alt="">
-                        <img src="./img/_playIcon.svg" alt="" class="playBtn">
                         <p>日本遺產麒麟獅子舞 Digest 繁體中文(日本遺産「麒麟のまち」推進協議会)
                         </p>
                         
                     </a>
-                    <a class="swiper-slide" href="javascript:;">
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/evYYMJycs6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <a class="swiper-slide videoPlay" href="javascript:;" data-link="https://www.youtube.com/embed/evYYMJycs6Y">
                         <img src="./img/video1.jpeg" alt="">
-                        <img src="./img/_playIcon.svg" alt="" class="playBtn">
                         <p>麒麟之鄉 概念影片(いなばのきりぞう)3
                         </p>
                     </a>
@@ -390,8 +391,219 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="wheresLion" id="whereLion">
+        <div>
+            <div class="title">
+                <img src="./img/_decoText5.svg" alt="" class="decoText">
+                <img src="./img/_title5.svg" alt="">
+                <p>麒麟獅子</p>
+            </div>
+
+            <div class="lionContainer">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"> 
+                        <img src="./img/wheresLionImg1.png" alt="">
+
+                        <!-- whereLion = WL -->
+                        <p class="textLeft1 WLdecoText">神社創建於648年</p>
+                        <p class="textLeft2 WLdecoText">因幡首屈一指的神社</p>
+                        <p class="texRight1 WLdecoText">1959年被指定為</p>
+                        <p class="texRight2 WLdecoText">鳥取縣無形民俗文化財產</p>
+
+                        <p class="location">【鳥取市】宇倍神社</p>
+
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/MaxERKg_CRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- data-link 給予youtube link -->
+                        <a href="javascript:;" class="videoPlay" data-link="https://www.youtube.com/embed/MaxERKg_CRc">
+                            <img src="./img/_playMovie.svg" alt="">
+                            <img src="./img/_arrow.svg" alt="">
+                        </a>
+
+                        <!-- decoCloud = DC -->
+                        <figure class="decoCloud DCright"><img src="./img/_decoImg2.svg" alt=""></figure>
+                        <figure class="decoCloud DCleft"><img src="./img/_decoImg2.svg" alt=""></figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/wheresLionImg2.png" alt="">
+
+                        <p class="textLeft1 WLdecoText">獅頭有2個</p>
+                        <p class="texRight1 WLdecoText">當中1個於文化13年￭
+                            1816製作</p>
+
+                        <p class="location">【岩美町】熊野神社</p>
+
+                        <a href="javascript:;"  class="videoPlay" data-link="https://www.youtube.com/embed/MaxERKg_CRc">
+                            <img src="./img/_playMovie.svg" alt="">
+                            <img src="./img/_arrow.svg" alt="">
+                        </a>
+
+                        <!-- decoCloud = DC -->
+                        <figure class="decoCloud DCright"><img src="./img/_decoImg2.svg" alt=""></figure>
+                        <figure class="decoCloud DCleft"><img src="./img/_decoImg2.svg" alt=""></figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/wheresLionImg3.png" alt="">
+
+                        <p class="textLeft1 WLdecoText">5月2、3日例祭</p>
+                        <p class="textLeft2 WLdecoText">1659年創始於江戶初期</p>
+                        <p class="texRight1 WLdecoText">自宇倍神社學會舞。</p>
+
+                        <p class="location">【若櫻町】若櫻神社</p>
+
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1CgpMQLfBmQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <a href="javascript:;"  class="videoPlay" data-link="https://www.youtube.com/embed/1CgpMQLfBmQ">
+                            <img src="./img/_playMovie.svg" alt="">
+                            <img src="./img/_arrow.svg" alt="">
+                        </a>
+
+                        <!-- decoCloud = DC -->
+                        <figure class="decoCloud DCright"><img src="./img/_decoImg2.svg" alt=""></figure>
+                        <figure class="decoCloud DCleft"><img src="./img/_decoImg2.svg" alt=""></figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/wheresLionImg4.png" alt="">
+
+                        <p class="textLeft1 WLdecoText">舞來自宇倍神社</p>
+                        <p class="textLeft2 WLdecoText">1998年獲指定</p>
+                        <p class="texRight1 WLdecoText">為鳥取縣無形民俗文化財產。</p>
+    
+
+                        <p class="location">【智頭町】蟲井神社</p>
+
+                        <a href="javascript:;"  class="videoPlay" data-link="https://www.youtube.com/embed/1CgpMQLfBmQ">
+                            <img src="./img/_playMovie.svg" alt="">
+                            <img src="./img/_arrow.svg" alt="">
+                        </a>
+
+                        <!-- decoCloud = DC -->
+                        <figure class="decoCloud DCright"><img src="./img/_decoImg2.svg" alt=""></figure>
+                        <figure class="decoCloud DCleft"><img src="./img/_decoImg2.svg" alt=""></figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/wheresLionImg5.png" alt="">
+
+                        <p class="textLeft1 WLdecoText">獅身披著貼滿許御幣的獅子皮</p>
+                        <p class="textLeft2 WLdecoText">此為神道中獻給神的紙條或布條</p>
+                        <p class="texRight1 WLdecoText">1998年被指定</p>
+                        <p class="texRight2 WLdecoText">為鳥取縣無形民俗文化財產</p>
+    
+
+                        <p class="location">【八頭町】澤神社</p>
+
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/aav9F00p9YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <a href="javascript:;"  class="videoPlay" data-link="https://www.youtube.com/embed/aav9F00p9YE">
+                            <img src="./img/_playMovie.svg" alt="">
+                            <img src="./img/_arrow.svg" alt="">
+                        </a>
+
+                        <!-- decoCloud = DC -->
+                        <figure class="decoCloud DCright"><img src="./img/_decoImg2.svg" alt=""></figure>
+                        <figure class="decoCloud DCleft"><img src="./img/_decoImg2.svg" alt=""></figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/wheresLionImg6.png" alt="">
+
+                        <p class="textLeft1 WLdecoText">黑色獅子頭上綁著3條御幣</p>
+                        <p class="textLeft2 WLdecoText">此為神道中祭神用的布條或紙條</p>
+                        <p class="texRight1 WLdecoText">鬼臉猩猩是逗獅子者</p>
+                        <p class="texRight2 WLdecoText">為其特徵，舞承自岩美町。</p>
+    
+
+                        <p class="location">【香美町】十二社神社</p>
+
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/dc403jWS9N4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <a href="javascript:;"  class="videoPlay" data-link="https://www.youtube.com/embed/dc403jWS9N4">
+                            <img src="./img/_playMovie.svg" alt="">
+                            <img src="./img/_arrow.svg" alt="">
+                        </a>
+
+                        <!-- decoCloud = DC -->
+                        <figure class="decoCloud DCright"><img src="./img/_decoImg2.svg" alt=""></figure>
+                        <figure class="decoCloud DCleft"><img src="./img/_decoImg2.svg" alt=""></figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./img/wheresLionImg7.png" alt="">
+
+                        <p class="textLeft1 WLdecoText">現仍保存第一代獅頭</p>
+                        <p class="textLeft2 WLdecoText">頭於1817年製作</p>
+                        <p class="texRight1 WLdecoText">1972年獲指定</p>
+                        <p class="texRight2 WLdecoText">為兵庫縣重要無形文化財產</p>
+    
+
+                        <p class="location">【新温泉町】宇都野神社</p>
+
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/oS2jNXInRDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <a href="javascript:;"  class="videoPlay" data-link="https://www.youtube.com/embed/oS2jNXInRDg">
+                            <img src="./img/_playMovie.svg" alt="">
+                            <img src="./img/_arrow.svg" alt="">
+                        </a>
+
+                        <!-- decoCloud = DC -->
+                        <figure class="decoCloud DCright"><img src="./img/_decoImg2.svg" alt=""></figure>
+                        <figure class="decoCloud DCleft"><img src="./img/_decoImg2.svg" alt=""></figure>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="foodBlock">
+        <div>
+            <figure>
+                <img src="./img/foodImg.jpeg" alt="">
+
+                <!-- 食的按鈕 -->
+                <a href="javascript:;">
+                    <div>
+                        <img src="./img/_foodText.svg" alt="">
+                    </div>
+                    <p>特別推薦<br>在地美食</p>
+                </a>
+            </figure>
+        </div>
+    </div>
 
 
+    <footer>
+        
+        <div class="info">
+            <div>
+                <p>主辨單位：日本遺産「麒麟のまち」推進協議会</p>
+                <p>本站照片及圖片由 鳥取市役所文化交流課 授權使用，未經許可不得任意轉載、重製、複印使</p>
+                <div class="links">
+                    <a href="https://www.kirinnomachi-japan-heritage.jp/zh-tw/" target="_bank">日本遺産「麒麟のまち」繁体字HP 
+                    </a>
+                    <a href="https://digjapan.travel/zh_tw/blog/id=12474" target="_bank">日本遺産ポータルサイト</a>
+                    <a href="https://japan-heritage.bunka.go.jp/ja/stories/story078/index.html" target="_bank">日本遺産ポータルサイト</a>
+                    <a href="javascript:;"  target="_bank">認識鳥取市</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div>
+                <p>Copyright © 傑森全球整合行銷股份有限公司JWI MARKETING CO.,LTD</p>
+            </div>
+        </div>
+        
+    </footer>
+
+
+    <div class="videoLightbox"> 
+        <a href="javascript:;" class="closeBtn"></a>
+        <iframe src="./videoLightBox.html" frameborder="0"></iframe>
     </div>
 
 
@@ -405,7 +617,9 @@
     </div>
 
 
+    <script src="./js/TweenMax.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/lightBox.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ const bannerData = []
 
 const bannerCircle = document.querySelector('.outline')
 const bannerDecoLine = document.querySelector('.decoLine>span')
-console.log(bannerCircle)
+// console.log(bannerCircle)
 
 
 const body = document.querySelector('body');
@@ -92,9 +92,6 @@ swiper.on('slideChange', function () {
         clearTimeout(time)
     },50)
     
-
-
-    console.log(this)
 });
 
 
@@ -221,6 +218,8 @@ const swiperLionInfo = new Swiper('.imgCarousel',{
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+        html.classList.toggle('menuActive')
+        body.classList.toggle('menuActive')
 
         // 抓到 錨點 連到的element
         const getTargetElement = document.querySelector(this.getAttribute('href'))
@@ -231,3 +230,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+
+const swiperWhereLion = new Swiper('.lionContainer',{
+    loop:true,
+    effect: 'fade',
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+        // 進行別的動做 click 還會繼續 autoplay
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+
+        renderBullet: function (index, className) {
+            return `
+                <span class="${className}">
+                        <img src="./img/wheresLionImg${index+1}.png" alt="">
+                </span>
+            `
+        },
+    }
+})
+
+swiperWhereLion.on('slideChange',function(){
+    let currentSlide = this.slides[this.activeIndex]
+    console.log(this.activeIndex)
+    // console.log(this)
+    // console.log(this.slides[this.realIndex])
+
+    let texts = currentSlide.querySelectorAll('.WLdecoText')
+
+    TweenMax.staggerFrom(
+        texts,
+        2,
+        {
+            scaleX: 0,
+            opacity: 0,
+            ease: Elastic.easeInOut.config(1, 0.3),
+        },
+        .5
+    )
+    console.log(texts)
+})
