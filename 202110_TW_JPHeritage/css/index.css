@@ -1554,6 +1554,86 @@
   }
 }
 
+@media screen and (max-width: 980px) {
+  .wheresLion > div .title {
+    max-width: 240px;
+    margin-bottom: 30px;
+  }
+  .wheresLion > div .title > p {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .wheresLion > div .title .decoText {
+    display: none;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide {
+    padding: 20px;
+    height: unset;
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    -ms-flex-align: start;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide .WLdecoText {
+    position: relative;
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    -webkit-transform-origin: unset;
+            transform-origin: unset;
+    height: unset;
+    left: unset;
+    top: unset;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide .decoCloud {
+    display: none;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide > img {
+    height: 72vw;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide .location {
+    margin: auto;
+    margin-top: 20px;
+    width: unset;
+    width: 100%;
+    text-align: center;
+  }
+  .wheresLion .lionContainer .swiper-wrapper .swiper-slide .WLdecoText, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .location, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .videoPlay, .wheresLion .lionContainer .swiper-wrapper .swiper-slide .decoCloud {
+    position: relative;
+    top: unset;
+    left: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .wheresLion .lionContainer .swiper-pagination {
+    margin-top: unset;
+  }
+  .wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet {
+    height: 75px;
+    margin: 10px;
+  }
+  .wheresLion .lionContainer .swiper-pagination .swiper-pagination-bullet::after {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .foodBlock {
   padding-top: 100px;
   padding-bottom: 60px;
